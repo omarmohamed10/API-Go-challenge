@@ -6,6 +6,6 @@
 
 Has 4 endpoints:
 - **Get => Retrieve all transactions**
-- **Get => Retrieve transaction with id**
+- **Get => Retrieve transaction by id**
 - **POST => Create a transaction**
 - **PATCH => Reverse a transaction**
