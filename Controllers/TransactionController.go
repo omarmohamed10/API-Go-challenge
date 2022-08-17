@@ -6,9 +6,9 @@ import (
 
 	"github.com/gin-gonic/gin"
 
+	business "example/API-Go-challenge/Business"
 	Data "example/API-Go-challenge/Data"
 	Entities "example/API-Go-challenge/Entities"
-	business "example/API-Go-challenge/business"
 )
 
 func GetAllTransactions(c *gin.Context) {
@@ -61,8 +61,8 @@ func ReverseTransaction(c *gin.Context) {
 		c.IndentedJSON(http.StatusNotFound, gin.H{"message": "transaction not found"})
 		return
 	}
-	transaction = business.ReverseTransaction(*transaction)
+	TransactionReversed := business.ReverseTransaction(*transaction)
 
-	c.IndentedJSON(http.StatusOK, transaction)
+	c.IndentedJSON(http.StatusOK, TransactionReversed)
 
 }
